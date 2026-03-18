@@ -127,4 +127,32 @@ int main()
 }
 ////
 
+#include <iostream>
+
+int main(){
+ 
+    std::string students[] = {"Glaceon"," Sylveon"," leafeon","Goofy Ahh"};
+
+    for(int i = 0;i < sizeof(students)/sizeof(std::string); i++)
+    {
+        std::cout << students[i];
+    }
+}
+/// Without having to change the length of the array use Sizeof() for automatic adjustments
+
+/// FOR EACH LOOP
+#include <iostream>
+
+int main(){
+ 
+    int grades[] = {65,23,56,290};
+
+   for(int grade : grades){ ///// Grade is the new variable replacing grades for array
+    std::cout << grade << "\n";
+
+   }
+   
+}
+/// Without having to change the length of the array use Sizeof() for automatic adjustments
+
 
