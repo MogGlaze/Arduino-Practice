@@ -156,3 +156,34 @@ int main(){
 /// Without having to change the length of the array use Sizeof() for automatic adjustments
 
 
+///Passing an array over to a function
+#include <iostream>
+
+
+double GetTotal(double prices[],int sizes);
+
+int main(){
+
+
+    double prices[] = {50.20,30,43.32,33.43,99.29};
+
+    int size = sizeof(prices)/sizeof(prices[0]);
+    
+    double amount = GetTotal(prices, size);
+
+    std::cout << "$" << amount;
+
+
+    return 0;
+}
+
+double GetTotal(double prices[],int size){
+    double amount = 0;
+    for(int i = 0; i < size; i++){
+        amount += prices[i];
+        
+    }
+    return amount;
+}
+
+
